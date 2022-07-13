@@ -33,6 +33,7 @@ function App() {
             updatedList.splice(checked.indexOf(event.target.value), 1);
         }
         setChecked(updatedList);
+        // console.log(updatedList);
     };
 
     const handleRadio = (event) => {
@@ -41,17 +42,18 @@ function App() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const newCheck = [...checked];
         setUser({
             name: name,
             password: password,
-            checked: newCheck,
+            checked: checked,
             radio: radio,
         });
     };
+
     return (
         <div className='App'>
-            <form style={{marginTop: '50px'}} onSubmit={handleSubmit}>
+            <h1>Form Get Info User</h1>
+            <form style={{marginTop: '10px'}} onSubmit={handleSubmit}>
                 <div>
                     <label>
                         Name:
@@ -73,7 +75,6 @@ function App() {
                     <h3>Your gender</h3>
                     <input
                         type='radio'
-                        id='html'
                         name='gender'
                         value='Male'
                         onChange={handleRadio}
@@ -81,7 +82,6 @@ function App() {
                       <label htmlFor='html'>Male</label>
                     <input
                         type='radio'
-                        id='css'
                         name='gender'
                         value='Female'
                         onChange={handleRadio}
@@ -89,7 +89,6 @@ function App() {
                       <label htmlFor='css'>Female</label> {' '}
                     <input
                         type='radio'
-                        id='javascript'
                         name='gender'
                         value='Other'
                         onChange={handleRadio}
