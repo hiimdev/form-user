@@ -77,7 +77,6 @@ function App() {
                         name='gender'
                         value='Male'
                         onChange={handleRadio}
-                        defaultChecked={true}
                     />
                       <label htmlFor='html'>Male</label>
                     <input
