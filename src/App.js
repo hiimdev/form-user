@@ -130,7 +130,7 @@ function App() {
             </h3>
             <hr></hr>
 
-            <h3>Vehicle: </h3>
+            <h3>Languages: </h3>
 
             {user.checked.map((value, index) => (
                 <div key={index}>
